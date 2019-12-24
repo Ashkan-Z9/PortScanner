@@ -9,7 +9,7 @@ How to use?
 ---------------
 <table>
     <tr>
-        <td>git clone https://github.com/Ashkan-Z9//PortScanner.git</td>
+        <td>git clone https://github.com/Ashkan-Z9/PortScanner.git</td>
     </tr>
     <tr>
         <td>cd PortScanner</td>
