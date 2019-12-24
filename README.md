@@ -21,7 +21,7 @@ How to use?
          <td>or</td>
     </tr>
     <tr>
-        <td>./python</td>
+        <td>./portscanner.py</td>
     </tr>
 </table>
 
