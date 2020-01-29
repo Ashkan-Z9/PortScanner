@@ -25,55 +25,75 @@ def ScanPorts():
 
     clear()
 
+    year = datetime.now() .year
+    month = datetime.now() .month
+    day = datetime.now() .day
     hour = datetime.now() .hour
     minute = datetime.now() .minute
     second = datetime.now() .second
 
-    print "-> Scan Started in ", (str(hour) + ':' + str(minute) + ':' + str(second))
+    print "-> Scan Started in ", (str(year) + '/' + str(month) + '/' + str(day) +' , ' + str(hour) + ':' + str(minute) + ':' + str(second))
     print "-> Host: " + ip
     print "-> Ports Range: " + str(range1) + ', ' + str(range2) + '\n'
     print "++++++++++++++++++++++++++++++++\n"
     range2+=1
+    count = 0
     for x in range (range1, range2):
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        connection = s.connect_ex((ip, x))
-    
-        print '[-] ' + str(x) + ' Not Working!'
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            connection = s.connect_ex((ip, x))
 
-        if connection == 0:
-            print '\n---------------------'
-            print "[+] Port " + str(x) + " Open"
-            print '---------------------\n'
+        except: 
+            print "\nError!"
+            print "Check IP Address or Your Internet Connection..."
+            ex()
+ 
+        else:
+            if connection == 0:
+                print '\n---------------------'
+                print "[+] Port " + str(x) + " Open"
+                print '---------------------\n' 
+                count +=1
 
-    print "\nScan Completed!"
+            else: 
+                print '[-] ' + str(x) + ' Close!'
+
+    print "\nScan Completed!\n"
+    print "========================="
+    print  '--> ' + str(count) + " Ports Open" + '<--'
+    print "========================="
     ex()
 
 def GetIp():
     clear()
     target = raw_input("Enter Host Name (example: google.com): ")
     
-    ip = socket.gethostbyname(target)
+    try:
+        ip = socket.gethostbyname(target)
 
-    print "\n-------------------"
-    print "IP -->", ip
-    print "-------------------"
+    except:
+        print "\nError!"
+        print "Check HostName or Your Internet Connection..."
+
+    else:
+        print "\n-------------------"
+        print "IP -->", ip
+        print "-------------------"
 
     ex()
 
 clear()
 os.system('color a')
 
-print ' ----------------------------------------------------'
-print '|                                                    |'
-print '|              Telegram: @Ashkan_Z9                  |'
-print '|                                                    |'
-print '|             Channel: @ZetaTech_iR2                 |'
-print '|                                                    |'
-print ' ----------------------------------------------------\n\n\n'
+print '|                             |'
+print '|          Port Scanner       |'
+print '|           @Ashkan_Z9        |'
+print '|                             |'
+print ' -----------------------------\n\n\n'
 
 print "1 - Scan Ports"
 print "2 - Get Target IP\n"
-n = raw_input("1 or 2?: ")
+n = raw_input("=> ")
 
 if n == '1':
     ScanPorts()
