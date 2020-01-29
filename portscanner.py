@@ -60,7 +60,7 @@ def ScanPorts():
 
     print "\nScan Completed!\n"
     print "========================="
-    print  '--> ' + str(count) + " Ports Open" + '<--'
+    print  '--> ' + str(count) + " Ports Open" + ' <--'
     print "========================="
     ex()
 
