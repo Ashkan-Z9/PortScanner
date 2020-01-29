@@ -1,27 +1,17 @@
 # PortScanner
 
-With this Script, you can scan all Open Ports on Server or Network.
-----------------
-just enough Enter Target IP Address and Choose Ports Range.
-----------------
+What does this tool do?
+--------------
+<ul>
+    <li>With this Script, you can scan all Open Ports on Server or Network.</li>
+    <li>just enough Enter Target IP Address and Choose Ports Range.</li>
+</ul>
 
 How to use?
 ---------------
-<table>
-    <tr>
-        <td>git clone https://github.com/Ashkan-Z9/PortScanner.git</td>
-    </tr>
-    <tr>
-        <td>cd PortScanner</td>
-    </tr>
-    <tr>
-        <td>python portscanner.py</td>
-    </tr>
-    <tr>
-         <td>or</td>
-    </tr>
-    <tr>
-        <td>./portscanner.py</td>
-    </tr>
-</table>
 
+```
+$ git clone https://github.com/Ashkan-Z9/PortScanner.git
+$ cd PortScanner
+$ python portscanner.py
+```
