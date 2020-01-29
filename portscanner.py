@@ -60,7 +60,7 @@ def ScanPorts():
 
     print "\nScan Completed!\n"
     print "========================="
-    print  '--> ' + str(count) + " Ports Open" + ' <--'
+    print  '--> ' + str(count) + " Ports Open" + '<--'
     print "========================="
     ex()
 
@@ -83,11 +83,13 @@ def GetIp():
     ex()
 
 clear()
-os.system('color a')
+
+if platform.system() == 'Windows':
+    os.system('color a')
 
 print '|                             |'
 print '|          Port Scanner       |'
-print '|           @Ashkan_Z9        |'
+print '|         Ashkan Farshad      |'
 print '|                             |'
 print ' -----------------------------\n\n\n'
 
