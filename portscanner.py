@@ -89,7 +89,7 @@ if platform.system() == 'Windows':
 
 print '|                             |'
 print '|          Port Scanner       |'
-print '|         Ashkan Farshad      |'
+print '|           @Ashkan_Z9        |'
 print '|                             |'
 print ' -----------------------------\n\n\n'
 
