@@ -11,7 +11,7 @@ How to use?
 ---------------
 
 ```
-$ git clone https://github.com/Ashkan-Z9/PortScanner.git
+$ git clone https://github.com/Ashkan-Z9/PortScanner
 $ cd PortScanner
 $ python portscanner.py
 ```
